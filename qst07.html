@@ -5,10 +5,17 @@
         <title>Questão 7</title>
     </head>
     <body>
+        Olá <nome>Fulano</nome><sobrenome>da Silva</sobrenome>! Você tem <idade>19</idade> anos!
         <script>
-            var nome = "Alvaro"
+            var nome = "Alvaro "
             var sobrenome = "Domingues de Freitas"
             var idade = "19"
+            var n = document.querySelector('nome');
+            n.textContent = nome;
+            var ln = document.querySelector('sobrenome');
+            ln.textContent = sobrenome;
+            var age = document.querySelector('idade');
+            age.textContent = idade;
         </script>
         
     </body>
