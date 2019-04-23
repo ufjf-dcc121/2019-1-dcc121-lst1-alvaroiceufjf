@@ -5,12 +5,15 @@
         <title>Questão 8</title>
     </head>
     <body>
+            <p>A soma de <span contenteditable="true">3</span> ,
+               <span contenteditable="true">7</span> e <span contenteditable="true">9</span> é <span>?</span>
+            </p>
         <script>
-            var x = 3
-            var y = 7
-            var z = 9
-            var resultado = x+y+z
-            
-            </script>
+           var spans = document.querySelectorAll("span");
+           var a = Number(spans[0].textContent);
+           var b = Number(spans[1].textContent);
+           var c = Number(spans[2].textContent);
+           spans[3].textContent = a + b + c;
+        </script>
     </body>
 </html>
