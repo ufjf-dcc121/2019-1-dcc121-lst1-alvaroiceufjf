@@ -5,12 +5,15 @@
         <title>Questão 10</title>
     </head>
     <body>
-        <p id="nome"> </p>
-        <p id="sobrenome"> </p>
-        <h1 id="nomeCompleto"> </h1>
+        <p id="nome">Alvaro</p>
+        <p id="sobrenome"> Domingues de Freitas</p>
+        <h1>Bem vindo <nome id="nomeCompleto">Fulano da Silva</nome>!</h1>
         <script>
-            
-        
+            var nome = "Alvaro "
+            var sobrenome = "Domingues de Freitas"
+            var nomeCompleto = nome + sobrenome
+            var elemento = document.getElementById("nomeCompleto")
+            elemento.textContent = nomeCompleto        
         </script>
     </body>
 </html>
