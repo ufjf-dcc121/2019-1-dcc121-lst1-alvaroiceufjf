@@ -9,8 +9,8 @@
         <p id="sobrenome"> Domingues de Freitas</p>
         <h1>Bem vindo <nome id="nomeCompleto">Fulano da Silva</nome>!</h1>
         <script>
-            var nome = "Alvaro "
-            var sobrenome = "Domingues de Freitas"
+            var nome = document.getElementById("nome")
+            var sobrenome = document.getElementById("sobrenome")
             var nomeCompleto = nome + sobrenome
             var elemento = document.getElementById("nomeCompleto")
             elemento.textContent = nomeCompleto        
