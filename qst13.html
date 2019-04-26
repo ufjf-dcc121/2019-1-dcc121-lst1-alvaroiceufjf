@@ -7,7 +7,13 @@
     <body>
         <div id="interativo">Clique-me!</div>
         <script>
-            
+            var interativo = document.getElementById("interativo")
+            interativo.addEventListener("click", trocar);
+            function trocar(){
+                var conteudo = document.getElementById("interativo")
+                conteudo.textContent = "Funcionou!"
+            }
+
         </script>
     </body>
 </html>
