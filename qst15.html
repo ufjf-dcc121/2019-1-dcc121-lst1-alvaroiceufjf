@@ -24,6 +24,13 @@
             var bolos = document.getElementById("bolos")
             var botaoAvaliar = document.getElementById("avaliar")
             var botaoLimpar = document.getElementById("limpar")
+            botaoLimpar.addEventListener("click", limparClick);
+            function limparClick(){
+                var conteudoresult = document.getElementById("resultado")
+                conteudoresult.textContent = ""
+                var conteudomelhoria = document.getElementById("melhorias")
+                conteudomelhoria.textContent = ""
+            }
             var resultado = document.getElementById("resultado")
             var melhorias = document.getElementById("melhorias")
             var media = (confeitaria + coberturas + bolos)/3.0
