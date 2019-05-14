@@ -14,15 +14,45 @@
             <p id="resultado"> </p>
             <button id="avaliar">Avaliar</button>
             <button id="limpar">Limpar</button>
-            <p id="melhorias"> </p>
+            <p id="melhoriascon"> </p>
+            <p id="melhoriascob"> </p>
+            <p id="melhoriasbolo"> </p>
         </main>
         <script>
             var nome = document.getElementById("nome")
             var anos = document.getElementById("anos")
-            var confeitaria = document.getElementById("confeitaria")
-            var coberturas = document.getElementById("coberturas")
-            var bolos = document.getElementById("bolos")
+            var confeitaria = Number (document.getElementById("confeitaria"))
+            var coberturas = Number (document.getElementById("coberturas"))
+            var bolos = Number (document.getElementById("bolos"))
+            var resultado = document.getElementById("resultado")
+            var melhorias = document.getElementById("melhoriascon")
+            var melhorias2 = document.getElementById("melhoriascob")
+            var melhorias3 = document.getElementById("melhoriasbolo")
+            var media = Number ((confeitaria + coberturas + bolos)/3.0)
             var botaoAvaliar = document.getElementById("avaliar")
+            botaoAvaliar.addEventListener("click", avaliarClick);
+            function avaliarClick(){
+                var conteudoresult = resultado
+                if (media >= 70) {
+                    conteudoresult.textContent = "Parabéns " + nome + "! Você está aprovado com média " + "70" + "!"
+                } else {
+                    conteudoresult.textContent = "Você está reprovado com média " + "50" + "!"
+                }
+
+                if (confeitaria < 60) {
+                    var conteudomelhoria1 = document.getElementById("melhoriascon")
+                    conteudomelhoria1.textContent = nome + ", considere estudar mais Confeitaria!"
+                }
+                if (coberturas < 60) {
+                    var conteudomelhoria2 = document.getElementById("melhoriascob")
+                    conteudomelhoria2.textContent = nome + ", considere estudar mais Coberturas!"
+                }
+                if (bolos < 60) {
+                    var conteudomelhoria3 = document.getElementById("melhoriasbolo")
+                    conteudomelhoria3.textContent = nome + ", considere estudar mais Bolos e Broas!"
+                }
+                
+            }
             var botaoLimpar = document.getElementById("limpar")
             botaoLimpar.addEventListener("click", limparClick);
             function limparClick(){
@@ -31,10 +61,6 @@
                 var conteudomelhoria = document.getElementById("melhorias")
                 conteudomelhoria.textContent = ""
             }
-            var resultado = document.getElementById("resultado")
-            var melhorias = document.getElementById("melhorias")
-            var media = (confeitaria + coberturas + bolos)/3.0
-        
         </script>
     </body>
 </html>
